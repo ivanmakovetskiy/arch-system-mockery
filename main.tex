@@ -32,7 +32,7 @@
 
 \graphicspath{{images/}}
 
-\titleformat{\chapter}{\Large\fontsize{18}{18}\bfseries\justifying}{\thechapter}{1.25 cm}{}
+\titleformat{\chapter}{\Large\fontsize{18}{18}\bfseries}{\thechapter}{1.25 cm}{}
 
 \titleformat{\section}{\large\fontsize{16}{16}\bfseries}{\thesection}{1.25 cm}{}
 
@@ -58,23 +58,11 @@
 
 \setmainfont{Times New Roman}
 
-\long\def\@makecaption#1#2{%
-  \vskip\abovecaptionskip
-  \sbox\@tempboxa{#1.~-- #2}%
-  \ifdim \wd\@tempboxa >\hsize
-    #1.~-- #2\par
-  \else
-    \global \@minipagefalse
-    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
-  \fi
-  \vskip\belowcaptionskip}
-
 
 \begin{document}
 	\input{titulus}
 		\setcounter{page}{2} 
 			\renewcommand{\contentsname}{\hfill\bfseries\Large СОДЕРЖАНИЕ\hfill}   
-			\renewcommand{\cftaftertoctitle}{\hfill}
 	\tableofcontents
 	\input{1}
 \end{document}
